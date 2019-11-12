@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body class="container">
+  <div style="margin-top: 10px;">
+    <h1 class="text-primary bg-warning text-center">AMAZON SHOPPING</h1>
+  </div>
+  <div class="form-group">
+    <div class="card-deck text-center text-dark" style="margin-top: 20px; font-weight: bold;">
+
+      <div class="card" style="height: 500px; width: 250px;">
+        <div class="card-header">
+          <h4>Apple iPad</h4>
+        </div>
+        <div class="card-body">
+          <img
+            src="https://cdn10.bigcommerce.com/s-t4yqg98af9/products/241350/images/369886/apiek2c3y__04079.1498757762.256.256.jpg?c=2"
+            width="256" height="256">
+        </div>
+        <div class="card-footer">
+          <div>
+            <label>Price : &#8377;
+              <input type="text" value="60000" id="deviceOneCost" readonly size="2">
+            </label>
+          </div>
+          <div>
+            <input type="number" value="1" id="deviceOneQty" min="0" max="4" size="1">
+            <input type="button" value="Add to Cart" name="" id="" onclick="addItems()">
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="height: 500px; width: 250px;">
+        <div class="card-header">
+          <h4>Apple iPad Air Mini</h4>
+        </div>
+        <div class="card-body">
+          <img src="https://gadgetexpress.com.au/wp-content/uploads/2019/01/IPAD-AIR-min.jpg" width="256" height="256">
+        </div>
+        <div class="card-footer">
+          <div>
+            <label>Price : &#8377;
+              <input type="text" value="40000" id="deviceTwoCost" readonly size="2"></label>
+          </div>
+          <div>
+            <input type="number" value="1" id="deviceTwoQty" min="0" max="4" size="1">
+            <input type="button" value="Add to Cart" name="" id="" onclick="addItems()">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br><br>
+    <div style="border: 5px solid black; padding: 5px; text-align: center; font-weight: bold; font-size: large;">
+      <label class="text-danger">Total price : <span id="total"> </span> </label>
+    </div>
+
+    <script>
+      function addItems() {
+        var a = document.getElementById("deviceOneCost").value;
+        var b = document.getElementById("deviceOneQty").value;
+        var c = document.getElementById("deviceTwoCost").value;
+        var d = document.getElementById("deviceTwoQty").value;
+        var e;
+
+        e =  ( ( Number(a) * Number(b) ) + ( Number(c) * Number(d) ) );
+        document.getElementById("total").innerHTML = e;
+      }
+
+    </script>
+</body>
+
+</html>
