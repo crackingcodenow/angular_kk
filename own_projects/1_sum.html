@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Calculation</title>
+  <script>
+    function startCalculation() {
+      var a = document.getElementById("valOne").value;
+      var b = document.getElementById("valTwo").value;
+      var c;
+      c = Number(a) + Number(b);
+      document.getElementById("total").innerHTML = c;
+    }
+  </script>
+</head>
+
+<body>
+  <h3>Enter the values to be added:</h3>
+  <div>
+    <input type="text" id="valOne" placeholder="Enter A">
+    <span>+</span>
+    <input type="text" id="valTwo" placeholder="Enter B">
+    <span>=</span>
+    <p id="total" placeholder="Answer shown here"> </p>
+    <br> <br>
+    <input type="button" value="Calculate" onclick="startCalculation()">
+  </div>
+</body>
+
+</html>
