@@ -1,4 +1,4 @@
-class Employee {
+class Employees {
   fname:string;
   lname:string;
   empId:number;
@@ -18,5 +18,5 @@ class Employee {
   
 }
 
-var obj = new Employee("john", "doe", 9810096175, 1234);
+var obj = new Employees("john", "doe", 9810096175, 1234);
 console.log(obj.getFullName());
