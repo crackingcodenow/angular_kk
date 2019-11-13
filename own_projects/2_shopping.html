@@ -11,10 +11,14 @@
 </head>
 
 <body class="container">
-  <div style="margin-top: 10px;">
-    <h1 class="text-primary bg-warning text-center">AMAZON SHOPPING</h1>
-  </div>
-  <div class="form-group">
+
+  <header>
+    <div style="margin-top: 10px;">
+      <h1 class="text-primary bg-warning text-center">AMAZON SHOPPING</h1>
+    </div>
+  </header>
+
+  <section>
     <div class="card-deck text-center text-dark" style="margin-top: 20px; font-weight: bold;">
 
       <div class="card" style="height: 500px; width: 250px;">
@@ -24,7 +28,7 @@
         <div class="card-body">
           <img
             src="https://cdn10.bigcommerce.com/s-t4yqg98af9/products/241350/images/369886/apiek2c3y__04079.1498757762.256.256.jpg?c=2"
-            width="256" height="256">
+            id="ipadAir" width="256" height="256">
         </div>
         <div class="card-footer">
           <div>
@@ -33,7 +37,7 @@
             </label>
           </div>
           <div>
-            <input type="number" value="1" id="deviceOneQty" min="0" max="4" size="1">
+            <input type="number" value="0" id="deviceOneQty" min="0" max="4" size="1">
             <input type="button" value="Add to Cart" name="" id="" onclick="addItems()">
           </div>
         </div>
@@ -44,7 +48,7 @@
           <h4>Apple iPad Air Mini</h4>
         </div>
         <div class="card-body">
-          <img src="https://gadgetexpress.com.au/wp-content/uploads/2019/01/IPAD-AIR-min.jpg" width="256" height="256">
+          <img src="https://gadgetexpress.com.au/wp-content/uploads/2019/01/IPAD-AIR-min.jpg" id="ipadAirMini" width="256" height="256">
         </div>
         <div class="card-footer">
           <div>
@@ -52,31 +56,44 @@
               <input type="text" value="40000" id="deviceTwoCost" readonly size="2"></label>
           </div>
           <div>
-            <input type="number" value="1" id="deviceTwoQty" min="0" max="4" size="1">
+            <input type="number" value="0" id="deviceTwoQty" min="0" max="4" size="1">
             <input type="button" value="Add to Cart" name="" id="" onclick="addItems()">
           </div>
         </div>
       </div>
 
     </div>
-    <br><br>
+  </section>
+
+
+  <footer>
     <div style="border: 5px solid black; padding: 5px; text-align: center; font-weight: bold; font-size: large;">
+      <div id="cart">
+
+      </div>
+
       <label class="text-danger">Total price : <span id="total"> </span> </label>
     </div>
+  </footer>
 
-    <script>
-      function addItems() {
-        var a = document.getElementById("deviceOneCost").value;
-        var b = document.getElementById("deviceOneQty").value;
-        var c = document.getElementById("deviceTwoCost").value;
-        var d = document.getElementById("deviceTwoQty").value;
-        var e;
+  <script>
+    function addItems() {
+      var a = document.getElementById("deviceOneCost").value;
+      var b = document.getElementById("deviceOneQty").value;
+      var c = document.getElementById("deviceTwoCost").value;
+      var d = document.getElementById("deviceTwoQty").value;
+      var e;
 
-        e =  ( ( Number(a) * Number(b) ) + ( Number(c) * Number(d) ) );
-        document.getElementById("total").innerHTML = e;
-      }
+      e = ((Number(a) * Number(b)) + (Number(c) * Number(d)));
+      document.getElementById("total").innerHTML = e;
 
-    </script>
+      var f = document.getElementById("ipadAir").src;
+      document.getElementById("cart").innerHTML = f ;
+      var g = document.getElementById("ipadAirMini").img;
+      document.getElementById("cart").innerHTML += g;
+    }
+
+  </script>
 </body>
 
 </html>
