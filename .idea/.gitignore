@@ -1,9 +1,9 @@
 
 # Default ignored files
 /workspace.xml
-/.idea
-/Angular.iml
-/misc.xml
-/modules.xml
-/vcs.xml
+.idea
+Angular.iml
+misc.xml
+modules.xml
+vcs.xml
 
