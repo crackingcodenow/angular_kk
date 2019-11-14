@@ -10,7 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
-<body class="container">
+<body class="container"> 
 
   <header>
     <div style="margin-top: 10px;">
@@ -38,7 +38,7 @@
           </div>
           <div>
             <input type="number" value="0" id="deviceOneQty" min="0" max="4" size="1">
-            <input type="button" value="Add to Cart" name="" id="" onclick="addItems()">
+            <input type="button" value="Add to Cart" name="" id="itemToCart" onclick="addItems()">
           </div>
         </div>
       </div>
@@ -57,7 +57,7 @@
           </div>
           <div>
             <input type="number" value="0" id="deviceTwoQty" min="0" max="4" size="1">
-            <input type="button" value="Add to Cart" name="" id="" onclick="addItems()">
+            <input type="button" value="Add to Cart" name="" id="itemToCart" onclick="addItems()">
           </div>
         </div>
       </div>
@@ -70,8 +70,7 @@
     <div style="border: 5px solid black; padding: 5px; text-align: center; font-weight: bold; font-size: large;">
       <div id="cart">
 
-      </div>
-
+      </div> 
       <label class="text-danger">Total price : <span id="total"> </span> </label>
     </div>
   </footer>
@@ -87,10 +86,8 @@
       e = ((Number(a) * Number(b)) + (Number(c) * Number(d)));
       document.getElementById("total").innerHTML = e;
 
-      var f = document.getElementById("ipadAir").src;
-      document.getElementById("cart").innerHTML = f ;
-      var g = document.getElementById("ipadAirMini").img;
-      document.getElementById("cart").innerHTML += g;
+      document.getElementById("itemToCart").addEventListener("click", addToCart);
+
     }
 
   </script>
