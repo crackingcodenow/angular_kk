@@ -10,3 +10,5 @@ var hotels = /** @class */ (function () {
 }());
 var obj1 = new hotels("Angular");
 console.log(obj1.getSub());
+var obj2 = new hotels("NodeJS");
+console.log(obj2.getSub());

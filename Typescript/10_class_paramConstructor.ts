@@ -13,4 +13,7 @@ class hotels {
 let obj1 = new hotels("Angular");
 console.log(obj1.getSub());
 
+let obj2 = new hotels("NodeJS");
+console.log(obj2.getSub());
+
 
